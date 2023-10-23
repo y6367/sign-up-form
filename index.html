@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="left">
+        <div class="banner">
+            <img src="images/odin-lined.png" alt="Logo of odin">
+            <p>ODIN</p>
+        </div>
+        <img src="images/halie-west-25xggax4bSA-unsplash.jpg" alt="Picture of a zoomed in leaf">
+        <div class="img-foot">Photo by Halie West on Unsplash</div>
+    </div>
+    <div class="right">
+        <div class="header">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+            <p>Sign up now to get started.</p>
+        </div>
+        <div class="body">
+            <p>You know you want to.</p>
+
+            <form action="example" method="post" id="the-form">
+                <p>Let's do this!</p>
+                <div class="inp">
+                    <label for="first_name">FIRST NAME</label>
+                    <input type="text" id="first_name" name="first_name">
+                </div>
+                <div class="inp">
+                    <label for="last_name"> LAST NAME</label>
+                    <input type="text" id="last_name" name="last_name">
+                </div>
+                <div class="inp">
+                    <label for="user_email">EMAIL</label>
+                    <input type="email" id="user_email" name="user_email">
+                </div>
+                <div class="inp">
+                    <label for="user_phone">PHONE NUMBER</label>
+                    <input type="text" name="user_phone" id="user_phone" maxlength="10" pattern="[0-9]">
+                </div>
+                <div class="inp">
+                    <label for="user_password">PASSWORD</label>
+                    <input type="password" name="user_password" id="user_password">
+                </div>
+                <div class="inp">
+                    <label for="confirm_password">CONFIRM PASSWORD</label>
+                    <input type="password" name="confirm_password" id="confirm_password">
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <button type="submit" form="the-form">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
