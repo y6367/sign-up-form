@@ -10,11 +10,11 @@ p {
     margin: 0;
     font-family: Kanit, sans-serif;
     font-size: 24px;
+    font-weight: 500;
 }
 
 .left {
     position: relative;
-    margin-right: 5%;
 }
 
 .banner {
@@ -69,23 +69,62 @@ p {
 }
 
 .right>.body>form {
-    border-width: 10px;
-    border-color: black;
-    border-style: solid;
     margin-top: 10vh;
-    min-height: 50vh;
+    height: 30vh;
     display: flex;
     flex-wrap: wrap;
 }
 
 .right>.body>form>p {
     min-width: 100%;
-    height: 20%;
+    height: auto;
 }
 
 .right>.body>form>.inp {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 40%;
     margin-right: 5%;
+}
+
+.right>.body>form>.inp>input {
+    height: 40%;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 3px;
+}
+
+.footer>.bot {
+    position: relative;
+    height: 5px;
+    width: 200%;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.right>.header, .right>.body {
+    padding-left: 5%;
+}
+
+.right>.body>form>.inp>input:focus {
+    border: 3px solid skyblue;
+    outline: none;
+}
+
+.footer>.foot-btn {
+    margin-top: 4vh;
+    padding-left: 5%;
+}
+
+.footer>.foot-btn>button {
+    background-color: darkolivegreen;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    padding: 15px 50px;
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 4vh;
+}
+
+.footer>.foot-btn>p {
+    font-size: 18px;
 }
