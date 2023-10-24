@@ -96,7 +96,7 @@ p {
 .footer>.bot {
     position: relative;
     height: 5px;
-    width: 200%;
+    width: 140%;
     box-shadow: 0 4px 2px -2px gray;
 }
 

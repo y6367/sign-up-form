@@ -23,41 +23,60 @@
         <div class="body">
             <p>You know you want to.</p>
 
-            <form action="example" method="post" id="the-form">
+            <form action="index.html" method="post" id="the-form">
                 <p>Let's do this!</p>
                 <div class="inp">
                     <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name">
+                    <input type="text" id="first_name" name="first_name" required>
                 </div>
                 <div class="inp">
                     <label for="last_name"> LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name">
+                    <input type="text" id="last_name" name="last_name" required>
                 </div>
                 <div class="inp">
                     <label for="user_email">EMAIL</label>
-                    <input type="email" id="user_email" name="user_email">
+                    <input type="email" id="user_email" name="user_email" required>
                 </div>
                 <div class="inp">
                     <label for="user_phone">PHONE NUMBER</label>
-                    <input type="text" name="user_phone" id="user_phone" maxlength="10" pattern="[0-9]">
+                    <input type="text" name="user_phone" id="user_phone" maxlength="10" pattern="[0-9]+" required>
                 </div>
                 <div class="inp">
                     <label for="user_password">PASSWORD</label>
-                    <input type="password" name="user_password" id="user_password">
+                    <input type="password" name="user_password" id="user_password" required>
+                    <span id="message"></span>
                 </div>
                 <div class="inp">
                     <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm_password" id="confirm_password">
+                    <input type="password" name="confirm_password" id="confirm_password" required onkeyup="password()">
                 </div>
             </form>
         </div>
         <div class="footer">
             <div class="bot"></div>
             <div class="foot-btn">
-                <button type="submit" form="the-form">Create Account</button>
+                <button type="submit" form="the-form" id="create-account">Create Account</button>
                 <p>Already have an account? <a href="">Log in</a></p>
             </div>
         </div>
     </div>
+
+    <script>
+        const userPassword = document.getElementById('user_password')
+        const confirmPassword = document.getElementById('confirm_password')
+        const message = document.getElementById('message')
+
+        function password() {
+            if (userPassword.value != confirmPassword.value) {
+                userPassword.style.border = '3px solid red'
+                confirmPassword.style.border = '3px solid red'
+                message.innerHTML = 'Passwords not matching'
+            } else {
+                userPassword.style.border = '1px solid rgb(202, 202, 202)'
+                confirmPassword.style.border = '1px solid rgb(202, 202, 202)'
+                message.innerHTML = ''
+            }
+        }       
+    </script>
 </body>
 </html>
